@@ -27,6 +27,12 @@ Create an initializer under config/initializers ex(app_box.rb) and then add the 
     # application
     AppBox.init Rails.env, Rails.root
 
+Now you can access the above configurations like this
+
+    AppBox.foo # returns bar
+    AppBox.services.twitter.key # returns 456
+
+Cool, isn't it :) ?
 
 ## TODO
 * Write units tests
