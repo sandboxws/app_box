@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "app_box.gemspec",
     "lib/app_box.rb",
     "test/helper.rb",
     "test/test_app_box.rb"
