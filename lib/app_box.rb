@@ -1,4 +1,4 @@
-require 'yaml'
+require 'yaml' unless defined?(YAML)
 require 'ostruct'
 require 'singleton'
 
@@ -6,10 +6,13 @@ class AppBox < OpenStruct
   include Singleton
 
   def self.init(env, rails_root)
-    data = YAML.load_file("#{rails_root}/config/app_box.yml")
-    data['default'].each {|name, value| set_property(name, value)}
-    if data.include?(env)
-      data[env].each {|name, value| set_property(name, value)}
+    config_path = "#{rails_root}/config/app_box.yml"
+    if File.exists?(config_path)
+      data = YAML.load_file(config_path)
+      data['default'].each {|name, value| set_property(name, value)}
+      if data.include?(env)
+        data[env].each {|name, value| set_property(name, value)}
+      end
     end
   end
 
