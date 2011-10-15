@@ -1,6 +1,12 @@
 = app_conf
 
-Description goes here.
+The last rails application configuration manager you'll ever need. app_conf provides a simple and
+yet very powerful structure to configure glonal settings for any Rails application.
+
+== TODO
+* Write units tests
+* Add support to any rack based application
+* Refactor the code and write documentation
 
 == Contributing to app_conf
  

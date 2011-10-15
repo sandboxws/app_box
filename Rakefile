@@ -17,15 +17,15 @@ Jeweler::Tasks.new do |gem|
   gem.name = "app_conf"
   gem.homepage = "http://github.com/sandboxws/app_conf"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
-  gem.email = "ahmed.elhussaini@espace.com.eg"
+  gem.summary = %Q{Simple and easy configuration for your Rails application}
+  gem.description = %Q{app_conf provides a simple and yet very powerful structure to configure glonal settings for any Rails application.}
+  gem.email = "aelhussaini@gmail.com"
   gem.authors = ["Ahmed El.Hussaini"]
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
 
-require 'rake/testtask'
+require 'rake/testtask'rake version:write MAJOR=0 MINOR=1 PATCH=0
 Rake::TestTask.new(:test) do |test|
   test.libs << 'lib' << 'test'
   test.pattern = 'test/**/test_*.rb'
