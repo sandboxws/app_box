@@ -2,11 +2,11 @@ require 'yaml'
 require 'ostruct'
 require 'singleton'
 
-class AppConf < OpenStruct
+class AppBox < OpenStruct
   include Singleton
 
   def self.init(env, rails_root)
-    data = YAML.load_file("#{rails_root}/config/app_conf.yml")
+    data = YAML.load_file("#{rails_root}/config/app_box.yml")
     data['default'].each {|name, value| set_property(name, value)}
     if data.include?(env)
       data[env].each {|name, value| set_property(name, value)}
@@ -14,13 +14,13 @@ class AppConf < OpenStruct
   end
 
   def self.method_missing(name, *args, &block)
-    AppConf.instance.send(name, *args)
+    AppBox.instance.send(name, *args)
   end
 
-  def self.set_property(name, value, parent=AppConf)
+  def self.set_property(name, value, parent=AppBox)
     if value.class == String
       if parent.nil?
-        AppConf.send "#{name}=", value
+        AppBox.send "#{name}=", value
       else
         parent.send "#{name}=", value
       end

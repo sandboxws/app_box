@@ -1,6 +1,6 @@
-= app_conf
+= app_box
 
-The last rails application configuration manager you'll ever need. app_conf provides a simple and
+The last rails application configuration manager you'll ever need. app_box provides a simple and
 yet very powerful structure to configure glonal settings for any Rails application.
 
 == TODO
@@ -8,7 +8,7 @@ yet very powerful structure to configure glonal settings for any Rails applicati
 * Add support to any rack based application
 * Refactor the code and write documentation
 
-== Contributing to app_conf
+== Contributing to app_box
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
