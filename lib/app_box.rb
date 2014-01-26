@@ -21,7 +21,7 @@ class AppBox < OpenStruct
   end
 
   def self.set_property(name, value, parent=AppBox)
-    if value.class == String
+    if value.class == String || value.class == Array
       if parent.nil?
         AppBox.send "#{name}=", value
       else
@@ -29,7 +29,7 @@ class AppBox < OpenStruct
       end
     elsif value.class == Hash
       parent = parent.send "#{name}=", OpenStruct.new
-      value.each do |_name, _value| 
+      value.each do |_name, _value|
         set_property(_name, _value, parent)
       end
     end
