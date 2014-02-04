@@ -1,5 +1,7 @@
 # app_box
 
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/sandboxws/app_box/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
 The last rails application configuration manager you'll ever need. app_box provides a simple and
 yet very powerful structure to configure glonal settings for any Rails application.
 
